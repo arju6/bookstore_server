@@ -124,7 +124,7 @@ exports.bookpaymentController = async (req, res) => {
             buyerEmail: loginUserMail,
         },
         success_url: `https://book-store-frontend-zm89.vercel.app/success?session_id={CHECKOUT_SESSION_ID}`,
-        cancel_url: "https://book-store-frontend-zm89.vercel.app/logincancel",
+        cancel_url: "https://book-store-frontend-zm89.vercel.app/cancel",
     });
     console.log(session);
     res.status(200).json({ checkoutURL: session.url });
